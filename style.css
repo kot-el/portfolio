@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+:root {
+    --main-bg: #000000;
+    --panel-bg: #4a475a; 
+    --accent-color: #bcaccf; 
+    --text-muted: #cdcdcd;
+}
+
+header {
+    background-color: rgba(74, 71, 90, 0.9); 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+main {
+    padding-top: 60px; 
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-bg);
+}
+
+.hero h1 {
+    font-size: 56px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero .subtitle {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #8a879a;
+}
+
+.about-section, .skills-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-section p {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.projects-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-item {
+    text-align: left;
+}
+
+.project-item h3 {
+    text-align: left;
+    font-size: 18px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.project-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+.project-item ul li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #4a475a;
+    padding: 40px 20px;
+    margin-top: 100px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.contact-item i {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+.whatsapp-icon { color: #25D366; }
+.telegram-icon { color: #0088cc; }
+.mail-icon { color: #ffffff; }
+
+.footer-right {
+    align-self: flex-end;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #b5b2c2;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right {
+        align-self: center;
+        margin-top: 20px;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+}
